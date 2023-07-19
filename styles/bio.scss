@@ -1,3 +1,4 @@
+@use 'partials/mixins.scss' as *;
 @font-face {
   font-family: "Avenir Next";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
@@ -23,17 +24,33 @@ body {
     background-color: #323232;   
     .nav {
         display: flex;
-        padding-top: 40px;
+        padding-top: 2.5rem;
         align-items: center;
+        @include mobile {
+            display: block;
+        }
     }
     .nav-header {
         margin: 0;
         color: #FFFFFF;
-        padding-left: 120px;
-        padding-bottom: 40px;
+        padding-left: 7.5rem;
+        padding-bottom: 2.5rem;
         font-weight: 400;
-        padding-right: 40px;
-        font-size: 35px;
+        padding-right: 3.75rem;
+        font-size: 2.188rem;
+        @include tablet {
+            padding-left: 4.375rem;
+        }
+        @include mobile {
+            font-size: 3.75rem;
+            text-align: center;
+            padding-left: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+        .nav--link {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
     }
     .nav_list {
         list-style: none;
@@ -41,17 +58,34 @@ body {
         display: flex;
         color: #FFFFFF;
         align-items: center;
+        @include mobile {
+            text-align: center;
+            padding-left: 0;
+        }
     }
     .nav_list_item_one {
         padding: 0;
-        padding-bottom: 40px;
-        font-size: 20px;
+        padding-bottom: 2.5rem;
+        font-size: 1.25rem;
+        @include tablet {
+            font-size: 1.563rem;
+        }
+        @include mobile {
+            font-size: 2.5rem;
+        }
     }
     .nav_list_item_two {
-        padding-left: 40px;
-        padding-bottom: 40px;
-        font-size: 20px;
+        padding-left: 3.75rem;
+        padding-bottom: 2.5rem;
+        font-size: 1.25rem;
         color: #afafaf;
+        @include tablet {
+            font-size: 1.563rem;
+        }
+        @include mobile {
+            padding-left: 6.25rem;
+            font-size: 1.875rem;
+        }
     }
     .nav_list--link-one {
         text-decoration: none;
@@ -62,9 +96,12 @@ body {
         color: #afafaf;
     }
     .active {
-            border-bottom: 3px solid #FFFFFF;    
+            border-bottom: 0.188rem solid #FFFFFF;    
             width: 50%;
-            padding-bottom: 40px;
+            padding-bottom: 2.5rem;
+            @include mobile {
+                border-bottom: 0.375rem solid #FFFFFF;
+            }
     }
 }
 
@@ -74,28 +111,35 @@ body {
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
-    height: 1000px;
+    height: 62.5rem;
     display: flex;
     align-items: center;
-    .gradient {
-        background-color: rgba(0, 0, 0, 0.5);
-        
-    }
     .main-one_header {
-        font-size: 90px;
-        line-height: 68px;
+        font-size: 5.625rem;
+        line-height: 4.25rem;
         font-weight: 600;
         color: #FFFFFF;
-        padding-left: 220px;
+        padding-left: 13.75rem;
+        @include tablet {
+            padding-left: 2.5rem;
+        }
+        @include mobile {
+            padding-left: 2.5rem;
+            font-size: 4.375rem;
+        }
     }
 }
 .main-two_header_one {
-    padding-left: 220px;
-    font-size: 50px;
+    padding-left: 13.75rem;
+    font-size: 3.125rem;
     font-weight: 600;
-}
-// .main-two {
-    
+    @include tablet {
+        padding-left: 2.5rem;
+    }
+    @include mobile {
+        padding-left: 2.5rem;
+    }
+}   
 .main-two_container_one {
     display: flex;
     flex-direction: column;
@@ -103,123 +147,235 @@ body {
     text-align: left;
     width: 63%;
     margin: auto;
-    
+    @include tablet {
+        margin: 0;
+        padding-left: 5rem;
+        width: 100%;
+    }
+    @include mobile {
+        margin: 0;
+        padding-left: 2.5rem;
+        width: 80%;
+    }
     .main-two_image {
-        height: 650px;
-        width: 1250px;
+        height: 40.625rem;
+        width: 78.125rem;
+        @include tablet {
+            width: 53.125rem;
+            height: 28.125rem;
+        }
+        @include mobile {
+            width: 40.625rem;
+            height: 28.125rem;
+        }
     }
     .main-two_quote {
         font-weight: 600;
-        font-size: 30px;
-        width: 75%;
-        margin-top: 48px;
+        font-size: 1.875rem;
+        width: 100%;
+        margin-top: 3rem;
         margin-bottom: 0;
+        @include tablet {
+            width: 80%;
+        }
     }
     .sub-text {
-        font-size: 21px;
+        font-size: 1.313rem;
         font-weight: 600;
+        @include mobile {
+            font-size: 1.875rem;
+        }
     }
     .main-two_header_two {
-        font-size: 30px;
+        font-size: 1.875rem;
         font-weight: 600;
     }
 }
-// }
 .main-two_container_two {
     display: flex;
     margin: auto;
     width: 63%;
-    padding-bottom: 50px;
-    .description-one {
-        padding-right: 20px;
-        font-size: 20px;
+    padding-bottom: 3.125rem;
+    @include tablet {
+        margin: 0;
+        padding-left: 5rem;
+    }
+    @include mobile {
+        display: block;
         margin: 0;
     }
-    .description-two {
-        padding-left: 20px;
-        font-size: 20px;
+    .description-one {
+        padding-right: 1.25rem;
+        font-size: 1.25rem;
         margin: 0;
+        @include mobile {
+            padding-right: 0;
+            padding-left: 2.5rem;
+        }
+    }
+    .description-two {
+        padding-left: 1.25rem;
+        font-size: 1.25rem;
+        margin: 0;
+        @include mobile {
+            padding-left: 2.5rem;
+            padding-top: 2.5rem;
+        }
     }
 }
 .main-three {
     background-color: #fafafa;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     .main-three_header {
-    padding-left: 220px;
-    padding-bottom: 20px;
-    font-size: 50px;
+    padding-left: 13.75rem;
+    padding-bottom: 1.25rem;
+    font-size: 3.125rem;
     font-weight: 600;
     margin-bottom: 0;
+    @include tablet {
+        padding-left: 2.5rem;
+    }
+    @include mobile {
+        padding-left: 2.5rem;
+    }
     }
     .photos-container{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        padding-left: 12.5rem;
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 1.25rem;
+            width: 100vw;
+        }
+        @include mobile {
+            padding-left: 2.5rem;
+            display: block;
+        }
     }
     .main-three_photos {
-        width: 460px;
-        height: 250px;
-        padding: 20px;
+        width:  28.75rem;
+        height: 15.625rem;
+        padding: 1.25rem;
+        @include tablet {
+            width: 18.75rem;
+            height: 15.625rem; 
+        }
+        @include mobile {
+            width: 37.5rem;
+            height: 18.75rem;
+            padding-left: 0;
+        }
     }
 }
 .footer {
     background-color: #323232;
-    padding: 0 220px;
+    padding: 0 13.75rem;
+    @include tablet {
+        padding: 0 2.5rem;
+    }
+    @include mobile {
+        padding: 0;
+    }
     .footer-nav {
         display: flex;
         justify-content: left;
-        gap: 40px;
+        gap: 2.5rem;
         align-items: baseline;
+        @include mobile {
+            display: block;
+            padding-top: 2.5rem;
+        }
     }
     .footer_header {
         color: #FFFFFF;
-        font-size: 50px;
+        font-size: 3.125rem;
         font-weight: 600;
+        @include tablet {
+            font-size: 1.875rem;
+        }
+        @include mobile {
+            padding-left: 2.5rem;
+        }
     }
     .footer_icon {
         width: auto;
-        height: 30px;
+        height: 1.875rem;
+        @include tablet {
+            height: 1.25rem;
+        }
+        @include mobile {
+            padding: 0 2.5rem;
+        }
     }
     .footer_bandsite {
         color: #FFFFFF;
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: 400;
-        padding-left: 736px;
+        padding-left: 46rem;
+        @include tablet {
+            padding-left: 21.875rem;
+            font-size: 1.563rem;
+        }
+        @include mobile {
+            display: none;
+        }
     }
     .footer_info {
         display: flex;
         justify-content: left;
-        gap: 70px;
+        gap: 4.375rem;
+        @include mobile {
+            display: block;
+            padding-top: 2.5rem;
+            padding-left: 2.5rem;
+        }
     }
     .footer_container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 2.5rem;
     }
     .info-one {
         color: #FFFFFF;
         margin: 0;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.25rem;
+        @include tablet {
+          font-size: 0.938rem;  
+        }
     }
     .info-two {
         color: #fafafa;
         margin: 0;
-        font-size: 20px;
+        font-size: 1.25rem;
+        @include tablet {
+          font-size: 0.938rem;    
+        }
     }
     .info-three {
         color: #fafafa;
         margin: 0;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 400;
-        // padding: 20px 0;
+        @include tablet{
+          font-size: 0.938rem;        
+        }
+        
     }
     .copyright {
         color: #fafafa;
         margin: 0;
-        padding-bottom: 60px;
-        padding-top: 60px;
-        font-size: 19px;
+        padding-bottom: 3.75rem;
+        padding-top: 3.75rem;
+        font-size: 1.188rem;
+        @include tablet {
+            font-size: 0.875rem;
+        }
+        @include mobile {
+            padding-left: 2.5rem;
+        }
     }
 }
