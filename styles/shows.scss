@@ -7,6 +7,7 @@
         display: flex;
         padding-top: 2.5rem;
         align-items: center;
+        width: 100%;
         @include mobile {
             display: block;
         }
@@ -39,6 +40,7 @@
         display: flex;
         color: #FFFFFF;
         align-items: center;
+        padding: 0;
         @include mobile {
             text-align: center;
             padding-left: 0;
@@ -47,6 +49,7 @@
     .nav_list_item_one {
         padding: 0;
         padding-bottom: 2.5rem;
+        padding-right: 3.75rem;
         font-size: 1.25rem;
         @include tablet {
             font-size: 1.563rem;
@@ -56,7 +59,7 @@
         }
     }
     .nav_list_item_two {
-        padding-left: 3.75rem;
+        padding-left: 0;
         padding-bottom: 2.5rem;
         font-size: 1.25rem;
         color: #afafaf;
@@ -70,15 +73,15 @@
     }
     .nav_list--link-one {
         text-decoration: none;
-        color: #FFFFFF;
+        color: #afafaf;
     }
     .nav_list--link-two {
         text-decoration: none;
-        color: #afafaf;
+        color: #FFFFFF;
     }
-    .active--biography {
+    .active--shows {
             border-bottom: 0.188rem solid #FFFFFF;    
-            width: 50%;
+            width: 100%;
             padding-bottom: 2.5rem;
             font-weight: 600;
             @include mobile {
@@ -86,20 +89,18 @@
             }
     }
 }
-
-
 .main-one {
-    background-image: url(/assets/images/hero-bio.jpg), linear-gradient(#32323280,#32323280);
+    background-image: url(/assets/images/hero-shows.jpg), linear-gradient(#32323280,#32323280);
     background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
-    height: 62.5rem;
+    height: 55rem;
     display: flex;
+    gap: 6rem;
     align-items: center;
-    .main-one__header {
-        font-size: 5.625rem;
-        line-height: 4.25rem;
-        font-weight: 600;
+    .main-one__left {
+        width: 40%;
+        // line-height: 4.25rem;                                   LOOKLOOKLOOK
         color: #FFFFFF;
         padding-left: 13.75rem;
         @include tablet {
@@ -110,206 +111,92 @@
             font-size: 4.375rem;
         }
     }
-}
-.main-two-header-one {
-    padding-left: 13.75rem;
-    font-size: 3.125rem;
-    font-weight: 600;
-    @include tablet {
-        padding-left: 2.5rem;
-    }
-    @include mobile {
-        padding-left: 2.5rem;
-    }
-}   
-.main-two-container-one {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    text-align: left;
-    width: 63%;
-    margin: auto;
-    @include tablet {
+    .main-one__subheader {
         margin: 0;
-        padding-left: 5rem;
-        width: 100%;
+        font-size: 2.2rem;
+        padding-bottom: 2rem;
     }
-    @include mobile {
+    .main-one__header {
         margin: 0;
-        padding-left: 2.5rem;
-        width: 80%;
-    }
-    .main-two_image {
-        height: 40.625rem;
-        width: 78.125rem;
-        @include tablet {
-            height: auto;
-            width: 100%;
-            // width: 53.125rem;
-            // height: 28.125rem;
-        }
-        @include mobile {
-            height: auto;
-            width: 100%;
-            // width: 40.625rem;
-            // height: 28.125rem;
-        }
-    }
-    .main-two_quote {
         font-weight: 600;
-        font-size: 1.875rem;
-        width: 100%;
-        margin-top: 3rem;
-        margin-bottom: 0;
-        @include tablet {
-            width: 80%;
-        }
+        font-size: 5.7rem;
     }
-    .sub-text {
-        font-size: 1.313rem;
-        font-weight: 600;
-        @include mobile {
-            font-size: 1.875rem;
-        }
-    }
-    .main-two_header_two {
-        font-size: 1.875rem;
-        font-weight: 600;
+    .iframe {
+        width: 35rem;
+        border-radius: .5rem;
+        margin-top: 5rem;
     }
 }
-.main-two-container-two {
-    display: flex;
-    margin: auto;
-    width: 63%;
-    padding-bottom: 3.125rem;
-    @include tablet {
-        margin: 0;
-        padding-left: 5rem;
-    }
-    @include mobile {
-        display: block;
-        margin: 0;
-    }
-    .description-one {
-        padding-right: 1.25rem;
-        font-size: 1.25rem;
-        margin: 0;
-        @include mobile {
-            padding-right: 0;
-            padding-left: 2.5rem;
-        }
-    }
-    .description-two {
-        padding-left: 1.25rem;
-        font-size: 1.25rem;
-        margin: 0;
-        @include mobile {
-            padding-left: 2.5rem;
-            padding-top: 2.5rem;
-        }
-    }
-}
-.main-three {
-    background-color: #fafafa;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    .main-three_header {
-    padding-left: 13.75rem;
-    padding-bottom: 1.25rem;
-    font-size: 3.125rem;
-    font-weight: 600;
-    margin-bottom: 0;
-    @include tablet {
-        padding-left: 2.5rem;
-    }
-    @include mobile {
-        padding-left: 2.5rem;
-    }
-    }
-    .photos-container{
-        display: flex;
-        flex-wrap: wrap;
-        padding-left: 12.5rem;
-        @include tablet {
-            display: flex;
-            flex-wrap: wrap;
-            padding-left: 1.25rem;
-            width: 100vw;
-        }
-        @include mobile {
-            padding-left: 2.5rem;
-            display: block;
-        }
-    }
-    .main-three_photos {
-        width:  28.75rem;
-        height: 15.625rem;
-        padding: 1.25rem;
-        @include tablet {
-            height: auto;
-            width: 100%;
-            // width: 18.75rem;
-            // height: 15.625rem; 
-        }
-        @include mobile {
-            // width: 37.5rem;
-            // height: 18.75rem;
-            height: auto;
-            width: 100%;
-            padding-left: 0;
-        }
-    }
-}
-.main-four--header{
-    padding-left: 13.75rem;
-    font-size: 3.125rem;
-    font-weight: 600;
-    }
-.main-four {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 4rem;
-    .main-four--left {
-        display: flex;
 
+
+
+.shows {
+    display: flex;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 13.75rem;
+    align-items: baseline;
+    gap: 12rem;
+    .shows__header {
+        color: #323232;
+        font-size: 3rem;
+        font-weight: 600;
     }
-    .main-four--right {
+    .shows__listings {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
     }
-    .avatar {
-        width: 4rem;
+    #table--header {
+        display: flex;
+        gap: 16rem;
+    }
+    .shows__container {
+        display: flex;
+        align-items: baseline;
+        gap: 8rem;
+        justify-content: space-between;
+        border-bottom: #e1e1e1 .2rem solid;
+        padding-bottom: .8rem;
+        &:hover {
+            background-color: #fafafa;
+        }
+    }
+    .shows__container--button {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .shows__text--one {
+        color: #afafaf;
+        font-weight: 600;
+    }
+    .shows__text--two {
+        color: #323232;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .shows__text--three {
+        color: #323232;
+        font-size: 1.2rem;
+    }
+    .tickets--button {
+        border-radius: 4px;
+        background-color: #323232;
+        color: #FFFFFF;
+        width: 12rem;
+        font-size: 1.2rem;
         height: 3.5rem;
-        border-radius: 50%;
-        margin-right: 1rem;
         margin-top: 1rem;
-    }
-    .form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-    }
-    .label {
-        padding-right: 30rem;
-        color: #afafaf;
-    }
-    .label--two {
-        padding-right: 27.5rem;
-        padding-top: 3rem;
-        color: #afafaf;
-    }
-    #first--name {
-        border-radius: .2rem;
-        height: 3rem;
-        border: 1px #e1e1e1 solid;
-    }
-    #user--comment {
-        border-radius: .2rem;
-        height: 8rem;
-        border: 1px #e1e1e1 solid;
-    }
+     }
 }
+
+
+
+
+
+
 .footer {
     background-color: #323232;
     padding: 0 13.75rem;

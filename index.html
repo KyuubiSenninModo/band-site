@@ -11,26 +11,26 @@
         <nav class="nav">
             <h2 class="nav-header"><a href="index.html" class="nav--link">BANDSITE</a></h2>
             <ul class="nav_list">
-                <li class="nav_list_item_one active">
-                    <a href="" class="nav_list--link-one">Biography</a>
+                <li class="nav_list_item_one active--biography">
+                    <a href="index.html" class="nav_list--link-one">Biography</a>
                 </li>
                 <li class="nav_list_item_two">
-                    <a href="" class="nav_list--link-two">Shows</a>
+                    <a href="/pages/shows.html" class="nav_list--link-two">Shows</a>
                 </li>
             </ul>
         </nav>
     </header>
     <div class="main-one">
-        <h1 class="main-one_header">The Bees Knees</h1>
+        <h1 class="main-one__header">The Bees Knees</h1>
     </div>
-    <h2 class="main-two_header_one">About the Musicians</h2>
-        <div class="main-two_container_one">
-            <img src="/assets/images/band.jpg" alt="" class="main-two_image">
+    <h2 class="main-two-header-one">About the Musicians</h2>
+        <div class="main-two-container-one">
+            <img src="/assets/images/band.jpg" alt="Bees Knees Cover" class="main-two_image">
             <h3 class="main-two_quote">"We push each other to be the best. It's not uncommon for one of us to say 'this needs to be better, back to the drawing board'"</h3>
             <h4 class="sub-text">- Bryan Teddy, lead vocalist of The Bees Knees</h4>
             <h3 class="main-two_header_two">The Bees Knees</h3>
         </div>
-        <div class="main-two_container_two">
+        <div class="main-two-container-two">
             <p class="description-one">The Bees Knees is a pop rock band originating from San
             Francisco, California. The band consists of lead vocalist Bryan
             Teddy, guitarist Mack Tolkens, guitarist Andrew Green, bassist
@@ -53,37 +53,50 @@
     <div class="main-three">
         <h2 class="main-three_header">Photo Gallery</h2>
     <div class="photos-container">
-        <img src="/assets/images/Photo-gallery-1.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-2.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-3.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-4.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-5.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-6.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-7.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-8.jpg" alt="" class="main-three_photos">
-        <img src="/assets/images/Photo-gallery-9.jpg" alt="" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-1.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-2.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-3.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-4.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-5.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-6.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-7.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-8.jpg" alt="Concert Photos" class="main-three_photos">
+        <img src="/assets/images/Photo-gallery-9.jpg" alt="Concert Photos" class="main-three_photos">
     </div>
+    </div>
+        <h2 class="main-four--header">Join The Conversation</h2>
+        <div class="main-four">
+        <div class="main-four--left"><img class="avatar" src="/assets/images/Mohan-muruge.jpg" alt=""></span></div>
+        <div class="main-four--right">
+            <form class="form" action="/scripts/index-page.js">
+                <label class="label" for="name">NAME</label>
+                <input type="text" name="firstName" id="first--name" size="70">
+                <label for="email" class="label--two">COMMENT</label>
+                <input type="text" name="userComment" id="user--comment" size="70">
+            </form>
+        </div>
+        
     </div>
     <footer class="footer">
         <nav class="footer-nav">
-            <h2 class="footer_header">Get in Touch</h2>
-            <img src="/assets/icons/SVG/Icon-instagram.svg" alt="" class="footer_icon">
-            <img src="/assets/icons/SVG/Icon-facebook.svg" alt="" class="footer_icon">
-            <img src="/assets/icons/SVG/Icon-twitter.svg" alt="" class="footer_icon"> 
-            <h3 class="footer_bandsite">BANDSITE</h3>
+            <h2 class="footer__header">Get in Touch</h2>
+            <a href="https://www.instagram.com/"><img src="/assets/icons/SVG/Icon-instagram.svg" alt="Instagram" class="footer__icon"></a>
+            <a href="https://www.facebook.com/"><img src="/assets/icons/SVG/Icon-facebook.svg" alt="Facebook" class="footer__icon"></a>
+            <a href="https://www.twitter.com/"><img src="/assets/icons/SVG/Icon-twitter.svg" alt="Twitter" class="footer__icon"></a> 
+            <h3 class="footer__bandsite">BANDSITE</h3>
         </nav>
-        <div class="footer_info">
-            <div class="footer_container">
+        <div class="footer__info">
+            <div class="footer__container">
                 <p class="info-one">Cam Adams <br> The Bees Knees Management</p>
                 <p class="info-two">503 Broadway Penthouse, <br> New York, NY 10012, USA</p>
                 <p class="info-three">info@thebeesknees.com</p>
             </div>
-            <div class="footer_container">
+            <div class="footer__container">
                 <p class="info-one">Pearl Gregg <br> Limitless Artist Group</p>
                 <p class="info-two">Booking Agent for <br> USA / South America / Japan</p>
                 <p class="info-three">pearl.gregg@limitlessag.com</p>
             </div>
-            <div class="footer_container">
+            <div class="footer__container">
                 <p class="info-one">Carson Whyte <br> ARCH Entertainment</p>
                 <p class="info-two">Booking Agent for <br> UK / EU / AU</p>
                 <p class="info-three">cwhyte@archentertainment.com</p>
@@ -93,3 +106,4 @@
     </footer>
 </body>
 </html>
+<!-- BEM, Links to Icons, Fix Images, Look over feedback again,  -->
