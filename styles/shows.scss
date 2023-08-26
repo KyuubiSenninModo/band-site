@@ -131,65 +131,65 @@
 
 
 .shows {
-    display: flex;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    padding-left: 13.75rem;
+    padding-left: 9rem;
+    display: flex;
+    justify-content: space-around;
     align-items: baseline;
-    gap: 12rem;
     .shows__header {
         color: #323232;
         font-size: 3rem;
         font-weight: 600;
     }
-    .shows__listings {
+    .table {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        align-items: baseline;
     }
     #table--header {
         display: flex;
-        gap: 16rem;
+        justify-content: left;
+        gap: 21rem;
+        margin: 10px 0;
     }
-    .shows__container {
-        display: flex;
-        align-items: baseline;
-        gap: 8rem;
-        justify-content: space-between;
-        border-bottom: #e1e1e1 .2rem solid;
+    .row--header {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 10px 0;
         padding-bottom: .8rem;
-        &:hover {
-            background-color: #fafafa;
-        }
+        border-bottom: #e1e1e1 .2rem solid;
     }
-    .shows__container--button {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 1rem;
-    }
-    .shows__text--one {
+    .header--cell {
+        padding: 10px;
         color: #afafaf;
         font-weight: 600;
     }
-    .shows__text--two {
+    .date--cell {
+        padding: 10px;
         color: #323232;
         font-size: 1.2rem;
         font-weight: 600;
     }
-    .shows__text--three {
-        color: #323232;
-        font-size: 1.2rem;
-    }
-    .tickets--button {
-        border-radius: 4px;
+    .button--cell {
+        padding-top: 1rem;
+        padding-bottom: .5rem;
+        border-radius: .4rem;
         background-color: #323232;
         color: #FFFFFF;
         width: 12rem;
         font-size: 1.2rem;
-        height: 3.5rem;
-        margin-top: 1rem;
-     }
+        height: 1.8rem;
+        border-bottom: #e1e1e1 .2rem solid;
+        text-align: center;
+    }
+    .cell {
+        padding: 10px;
+        color: #323232;
+        font-size: 1.2rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
 }
 
 
