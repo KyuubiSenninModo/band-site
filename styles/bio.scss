@@ -266,17 +266,10 @@
     font-weight: 600;
     }
 .main-four {
-    display: flex;
-    justify-content: center;
     padding-bottom: 4rem;
-    .main-four--left {
-        display: flex;
-
-    }
-    .main-four--right {
-        display: flex;
-        flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .avatar {
         width: 4rem;
         height: 3.5rem;
@@ -287,29 +280,79 @@
     .form {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
     }
     .label {
-        padding-right: 30rem;
         color: #afafaf;
+        padding-left: 5.3rem;
+    }
+    .avatar--flex {
+        display: flex;
     }
     .label--two {
-        padding-right: 27.5rem;
         padding-top: 3rem;
         color: #afafaf;
     }
-    #first--name {
-        border-radius: .2rem;
-        height: 3rem;
+    #full--name {
+        border-radius: .6rem;
         border: 1px #e1e1e1 solid;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+        padding-left: 1.5rem;
+        padding-bottom: 1rem;
+        background-color: #fafafa;
     }
     #user--comment {
-        border-radius: .2rem;
-        height: 8rem;
+        border-radius: .6rem;
         border: 1px #e1e1e1 solid;
+        margin-bottom: 3rem;
+        font-size: 1.2rem;
+        padding-bottom: 8rem;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+        background-color: #fafafa;
+        width: 40rem;
+    }
+    .comment--button {
+        padding-top: 1rem;
+        padding-bottom: .8rem;
+        border-radius: .4rem;
+        background-color: #323232;
+        color: #FFFFFF;
+        width: 12rem;
+        font-size: 1.2rem;
+        text-align: center;
+        margin-left: 30rem;
+        margin-bottom: 2rem;
+    }
+    .comments--section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .individual--comment {
+        display: flex;
+        border-top: #e1e1e1 .2rem solid;
+        width: 50%;    
+    }
+    .flex--between--text{
+        display: flex;
+        justify-content: space-between;
+    }
+    .name-of-commenter {
+        color: #323232;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    .comment--date {
+        color: #afafaf;
+        font-size: 1.1rem;
+    }
+    .comment--text {
+        line-height: 1.5;
+        font-size: 1rem;
     }
 }
+
 .footer {
     background-color: #323232;
     padding: 0 13.75rem;

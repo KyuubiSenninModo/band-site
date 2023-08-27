@@ -15,6 +15,9 @@ const commentsArray = [
         Comment: "I can't stop listening. Every time i hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
 ]
+userName = document.querySelector(".name-of-commenter");
+userComment = document.querySelector(".comment--text");
+commentTimeStamp = document.querySelector(".comment--date");
 function displayComment(comment) {
     
 }

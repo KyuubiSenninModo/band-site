@@ -338,16 +338,10 @@ body {
 }
 
 .main-four {
-  display: flex;
-  justify-content: center;
   padding-bottom: 4rem;
-}
-.main-four .main-four--left {
-  display: flex;
-}
-.main-four .main-four--right {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .main-four .avatar {
   width: 4rem;
@@ -359,26 +353,76 @@ body {
 .main-four .form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .main-four .label {
-  padding-right: 30rem;
   color: #afafaf;
+  padding-left: 5.3rem;
+}
+.main-four .avatar--flex {
+  display: flex;
 }
 .main-four .label--two {
-  padding-right: 27.5rem;
   padding-top: 3rem;
   color: #afafaf;
 }
-.main-four #first--name {
-  border-radius: 0.2rem;
-  height: 3rem;
+.main-four #full--name {
+  border-radius: 0.6rem;
   border: 1px #e1e1e1 solid;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+  background-color: #fafafa;
 }
 .main-four #user--comment {
-  border-radius: 0.2rem;
-  height: 8rem;
+  border-radius: 0.6rem;
   border: 1px #e1e1e1 solid;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  padding-bottom: 8rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  background-color: #fafafa;
+  width: 40rem;
+}
+.main-four .comment--button {
+  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  border-radius: 0.4rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 12rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-left: 30rem;
+  margin-bottom: 2rem;
+}
+.main-four .comments--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-four .individual--comment {
+  display: flex;
+  border-top: #e1e1e1 0.2rem solid;
+  width: 50%;
+}
+.main-four .flex--between--text {
+  display: flex;
+  justify-content: space-between;
+}
+.main-four .name-of-commenter {
+  color: #323232;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.main-four .comment--date {
+  color: #afafaf;
+  font-size: 1.1rem;
+}
+.main-four .comment--text {
+  line-height: 1.5;
+  font-size: 1rem;
 }
 
 .footer {
