@@ -56,7 +56,6 @@ form.addEventListener("submit", (event) => {
         name: inputName,
         comment: inputComment
     };
-    commentsArray.push(newPost);
     event.target.reset();
     displayComment(newPost);
 
