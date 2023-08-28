@@ -1,3 +1,6 @@
+const api_key = "e7acfc16-afed-48d0-a469-a0a6c9fa3bd1";
+const shows_url = 'https://project-1-api.herokuapp.com/showdates';
+
 const concertsData = [
     {
        Date: "Mon Sept 06 2021",
@@ -30,7 +33,7 @@ const concertsData = [
         Location: "San Francisco, CA"
     }
 ]
-
+const row = document.querySelector(".row--header");
 // Creates Shows Header
 const showsSection = document.querySelector(".shows");
 const showsHeader = document.createElement("h1");
@@ -74,9 +77,9 @@ function createRowOnTable(showData) {
     const buttonCell = document.createElement("div");
     buttonCell.classList.add("button--cell");
 
-    dateCell.textContent = showData.Date;
-    venueCell.textContent = showData.Venue;
-    locationCell.textContent = showData.Location;
+    dateCell.textContent = showData.date;
+    venueCell.textContent = showData.place;
+    locationCell.textContent = showData.location;
     buttonCell.textContent = "BUY TICKETS";
 
     row.appendChild(dateCell);
@@ -85,6 +88,15 @@ function createRowOnTable(showData) {
     row.appendChild(buttonCell);
 }
 
-for (let i = 0; i < concertsData.length; i++) {
-    createRowOnTable(concertsData[i]);
-}
+axios.get(`${shows_url}?api_key=${api_key}`)
+.then((response) => {
+    for (let i = 0; i < response.data.length; i++) {
+        createRowOnTable(response.data[i]);
+    }
+    console.log(response.data);
+});
+
+row.addEventListener("click", (changeColor) => {
+    row.backgroundColor = "#afafaf";
+});
+    
