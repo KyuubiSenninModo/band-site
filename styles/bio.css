@@ -403,7 +403,6 @@ body {
   align-items: center;
 }
 .main-four .individual--comment {
-  display: flex;
   border-top: #e1e1e1 0.2rem solid;
   width: 50%;
 }
