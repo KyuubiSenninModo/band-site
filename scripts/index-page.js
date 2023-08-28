@@ -1,23 +1,73 @@
-const commentsArray = [
-    {
-        Name: "Connor Walton",
-        Timestamp: "02/17/2021",
-        Comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains"
-    },
-    {
-        Name: "Emilie Beach",
-        Timestamp: "01/09/2021",
-        Comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life u could relive, this would be it. What an incredible day."
-    },
-    {
-        Name: "Miles Acosta",
-        Timestamp: "01/09/2021",
-        Comment: "I can't stop listening. Every time i hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
+const api_key = "e7acfc16-afed-48d0-a469-a0a6c9fa3bd1";
+const comments_url = 'https://project-1-api.herokuapp.com/comments';
+
+
+
+
+
+let commentsSection = document.querySelector(".comments--section");
+let submitButton = document.querySelector(".comment--button");
+let userComment = document.getElementById("user--comment");
+let userFullName = document.getElementById("full--name");
+let form = document.getElementById("form");
+
+
+function displayComment(commentsData) {
+    // Creating HTML Structure and setting classes/text
+    let individualComment = document.createElement("div")
+    individualComment.classList.add("individual--comment");
+
+    let avatarFlex = document.createElement("div");
+    avatarFlex.classList.add("avatar--flex");
+
+    let avatar =  document.createElement("img");
+    avatar.classList.add("avatar");
+
+    let flexBetweenText = document.createElement("div");
+    flexBetweenText.classList.add("flex--between--text");
+
+    let nameOfCommenter = document.createElement("p");
+    nameOfCommenter.classList.add("name-of-commenter");
+    nameOfCommenter.textContent = commentsData.name;
+
+    let commentTimeStamp = document.createElement("p");
+    commentTimeStamp.classList.add("comment--date");
+    commentTimeStamp.textContent = commentsData.timestamp;
+
+    let commentText = document.createElement("p");
+    commentText.classList.add("comment--text");
+    commentText.textContent = commentsData.comment;
+
+    // Appending everything 
+    commentsSection.appendChild(individualComment);
+    individualComment.appendChild(avatarFlex);
+    avatarFlex.appendChild(avatar);
+    individualComment.appendChild(flexBetweenText);
+    flexBetweenText.appendChild(nameOfCommenter);
+    flexBetweenText.appendChild(commentTimeStamp);
+    individualComment.appendChild(commentText);
+};
+
+form.addEventListener("submit", (event) => {
+    inputName = event.target.userFullName.value;
+    inputComment = event.target.userComment.value;
+    event.preventDefault();
+    let newPost = { 
+        name: inputName,
+        comment: inputComment
+    };
+    commentsArray.push(newPost);
+    event.target.reset();
+    displayComment(newPost);
+
+    axios.post(`${comments_url}?api_key=${api_key}`, newPost);
+});
+
+axios.get(`${comments_url}?api_key=${api_key}`)
+.then((response) => {
+    for (let i = 0; i < response.data.length; i++) {
+        displayComment(response.data[i]);
     }
-]
-userName = document.querySelector(".name-of-commenter");
-userComment = document.querySelector(".comment--text");
-commentTimeStamp = document.querySelector(".comment--date");
-function displayComment(comment) {
-    
-}
+})
+
+
